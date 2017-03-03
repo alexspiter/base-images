@@ -1,4 +1,3 @@
 FROM ruby:2.3
 
-RUN apt-get update && apt-get install -y nodejs postgresql-client npm
-RUN npm install -g phantomjs
+RUN apt-get update && apt-get install -y nodejs postgresql-client
