@@ -4,7 +4,7 @@ FROM buildpack-deps:jessie
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 ENV NVM_DIR /root
-ENV NODE_VERSION v6.2.2
+ENV NODE_VERSION v6.4.0
 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash\
     && source $NVM_DIR/nvm.sh\
