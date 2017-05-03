@@ -19,7 +19,8 @@ RUN \
     # Install Erlang/OTP build deps
     apk -U add --virtual .erlang-build \
       build-base \
-      perl-dev && \
+      perl-dev \
+      gcc && \
     export ERLANG_SOURCE=otp_src_$ERLANG_VERSION && \
     wget http://erlang.org/download/$ERLANG_SOURCE.tar.gz && \
     tar -xzf $ERLANG_SOURCE.tar.gz && \
