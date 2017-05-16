@@ -19,6 +19,7 @@ RUN \
     # Install Erlang/OTP build deps
     apk -U add --virtual .erlang-build \
       build-base \
+      erlang-dev \
       perl-dev \
       gcc && \
     export ERLANG_SOURCE=otp_src_$ERLANG_VERSION && \
