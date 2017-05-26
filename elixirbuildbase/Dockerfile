@@ -16,10 +16,9 @@ RUN \
       ncurses-dev \
       unixodbc-dev \
       zlib-dev \
-      erlang-dev && \      
+      build-base
     # Install Erlang/OTP build deps
-    apk -U add --virtual .erlang-build \
-      build-base \
+RUN apk -U add --virtual .erlang-build \
       perl-dev \
       gcc && \
     export ERLANG_SOURCE=otp_src_$ERLANG_VERSION && \
