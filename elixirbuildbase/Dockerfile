@@ -17,6 +17,7 @@ RUN \
       unixodbc-dev \
       zlib-dev \
       build-base \
+      clang \
       gcc
     # Install Erlang/OTP build deps
 RUN apk -U add --virtual .erlang-build \
