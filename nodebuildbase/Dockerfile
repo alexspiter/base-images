@@ -13,5 +13,5 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh
     && nvm use default
 
 ENV PATH "/root/versions/node/${NODE_VERSION}/bin:${PATH}"
-# Installing with apt installs too much other packages
-RUN curl -L https://www.npmjs.com/install.sh | sh
+WORKDIR /root/versions/node/$NODE_VERSION/lib
+RUN mv ./node_modules ./node_modules.tmp && mv ./node_modules.tmp ./node_modules && npm install npm@latest -g
