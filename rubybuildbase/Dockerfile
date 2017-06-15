@@ -1,6 +1,6 @@
 FROM operable/alpine-base:0.3
 
-ENV RUBY_VERSION 2.4.0
+ENV RUBY_VERSION 2.4.1-r4
 
 RUN apk -U add \
     ruby=$RUBY_VERSION \
