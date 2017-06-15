@@ -1,6 +1,6 @@
-FROM operable/alpine-base:0.3
+FROM quay.io/honestbee/alpinebase:3.6
 
-ENV RUBY_VERSION 2.4.1-r4
+ENV RUBY_VERSION 2.4.1-r3
 
 RUN apk -U add \
     ruby=$RUBY_VERSION \
