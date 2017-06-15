@@ -7,3 +7,4 @@ RUN apk -U add \
     ruby-dev=$RUBY_VERSION \
     ruby-json=$RUBY_VERSION \
     ruby-bundler=1.15.0-r0 \
+    build-base
