@@ -8,5 +8,14 @@ RUN apk -U add \
     ruby-dev=$RUBY_VERSION \
     ruby-json=$RUBY_VERSION \
     ruby-bundler=$BUNDLER_VERSION \
+    ruby-irb=$RUBY_VERSION \
     libpq \
-    build-base
+    build-base \
+    postgresql-dev \
+    libxml2-dev \
+    libxslt \
+    qt \
+    xvfb \
+    libffi-dev \
+    ruby-bigdecimal \
+    nodejs
