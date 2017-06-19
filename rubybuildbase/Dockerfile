@@ -1,9 +1,23 @@
-FROM ruby:2.3
+FROM quay.io/honestbee/alpinebase:3.4
 
-ENV PHANTOMJS_VERSION 2.1.1
+ENV RUBY_VERSION 2.3.1-r0
+ENV BUNDLER_VERSION 1.12.5-r0
 
-RUN apt-get update && apt-get install -y nodejs postgresql-client
-RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 \
-    && bunzip2 phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 \
-    && tar xvf phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar \
-    && cp /phantomjs-$PHANTOMJS_VERSION-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
+RUN apk -U add \
+    ruby=$RUBY_VERSION \
+    ruby-dev=$RUBY_VERSION \
+    ruby-json=$RUBY_VERSION \
+    ruby-bundler=$BUNDLER_VERSION \
+    ruby-irb=$RUBY_VERSION \
+    libpq \
+    build-base \
+    postgresql-dev \
+    libxml2-dev \
+    libxslt \
+    qt \
+    xvfb \
+    libffi-dev \
+    ruby-bigdecimal \
+    imagemagick imagemagick-dev \
+    graphviz \
+    nodejs
