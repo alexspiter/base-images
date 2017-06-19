@@ -19,5 +19,4 @@ RUN apk -U add \
     libffi-dev \
     ruby-bigdecimal \
     imagemagick \
-    graphicsmagick \
     nodejs
