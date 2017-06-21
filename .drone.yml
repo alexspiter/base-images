@@ -8,15 +8,6 @@ pipeline:
     image: quay.io/tuannvm/drone-docker-publish
     pull: true
 
-# publish-alpinebase:
-#   image: plugins/docker
-#   repo: quay.io/honestbee/alpinebase
-#   dockerfile: alpinebase/Dockerfile
-#   tags:
-#     - ${DRONE_COMMIT_BRANCH}
-#   when:
-#     branch: [master]
-
   # notify:
   #   image: plugins/slack
   #   webhook: ${SLACK_WEBHOOK}
