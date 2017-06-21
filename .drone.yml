@@ -7,6 +7,8 @@ pipeline:
   test2:
     image: quay.io/tuannvm/drone-docker-publish
     pull: true
+    commands:
+      - ls -a
     privileged: true
 
   # notify:
