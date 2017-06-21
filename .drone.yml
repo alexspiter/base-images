@@ -16,9 +16,9 @@ pipeline:
 #   when:
 #     branch: [master]
 
-  notify:
-    image: plugins/slack
-    webhook: ${SLACK_WEBHOOK}
-    channel: feed-devops
-    when:
-      status: [ success, failure ]
+  # notify:
+  #   image: plugins/slack
+  #   webhook: ${SLACK_WEBHOOK}
+  #   channel: feed-devops
+  #   when:
+  #     status: [ success, failure ]
