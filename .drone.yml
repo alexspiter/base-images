@@ -3,6 +3,9 @@ pipeline:
     image: quay.io/honestbee/rubybuildbase
     commands:
       - env | grep DRONE
+  
+  test2:
+    image: quay.io/tuannvm/drone-docker-publish
 
 # publish-alpinebase:
 #   image: plugins/docker
@@ -13,9 +16,9 @@ pipeline:
 #   when:
 #     branch: [master]
 
-notify:
-  image: plugins/slack
-  webhook: ${SLACK_WEBHOOK}
-  channel: feed-devops
-  when:
-    status: [ success, failure ]
+  notify:
+    image: plugins/slack
+    webhook: ${SLACK_WEBHOOK}
+    channel: feed-devops
+    when:
+      status: [ success, failure ]
