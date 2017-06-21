@@ -1,0 +1,21 @@
+pipeline:
+  test:
+    image: quay.io/honestbee/rubybuildbase
+    commands:
+      - env | grep DRONE
+
+# publish-alpinebase:
+#   image: plugins/docker
+#   repo: quay.io/honestbee/alpinebase
+#   dockerfile: alpinebase/Dockerfile
+#   tags:
+#     - ${DRONE_COMMIT_BRANCH}
+#   when:
+#     branch: [master]
+
+notify:
+  image: plugins/slack
+  webhook: ${SLACK_WEBHOOK}
+  channel: feed-devops
+  when:
+    status: [ success, failure ]
