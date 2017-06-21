@@ -7,6 +7,7 @@ pipeline:
   test2:
     image: quay.io/tuannvm/drone-docker-publish
     pull: true
+    privileged: true
 
   # notify:
   #   image: plugins/slack
