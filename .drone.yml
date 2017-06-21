@@ -5,7 +5,7 @@ pipeline:
       - env | grep DRONE
   
   test2:
-    image: plugins/docker
+    image: quay.io/tuannvm/drone-docker-publish
     pull: true
 
   # notify:
