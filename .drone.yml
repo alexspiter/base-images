@@ -6,6 +6,7 @@ pipeline:
   
   test2:
     image: quay.io/tuannvm/drone-docker-publish
+    pull: true
 
 # publish-alpinebase:
 #   image: plugins/docker
