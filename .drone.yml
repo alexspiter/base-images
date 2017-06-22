@@ -4,10 +4,12 @@ pipeline:
     organization: tuannvm
     pull: true
     privileged: true
+    when:
+      branch: [master]
 
-  # notify:
-  #   image: plugins/slack
-  #   webhook: ${SLACK_WEBHOOK}
-  #   channel: feed-devops
-  #   when:
-  #     status: [ success, failure ]
+  notify:
+    image: plugins/slack
+    webhook: ${SLACK_WEBHOOK}
+    channel: tuan.nguyen
+    when:
+      status: [ success, failure ]
