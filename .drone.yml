@@ -16,6 +16,3 @@ pipeline:
     user: tuan.nguyen
     when:
       status: [ success, failure ]
-
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
