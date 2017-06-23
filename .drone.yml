@@ -9,8 +9,6 @@ pipeline:
     pull: true
     organization: tuannvm
     privileged: true
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
 
   notify:
     image: plugins/slack
@@ -18,3 +16,6 @@ pipeline:
     user: tuan.nguyen
     when:
       status: [ success, failure ]
+
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
