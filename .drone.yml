@@ -9,6 +9,8 @@ pipeline:
     pull: true
     organization: tuannvm
     privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
   notify:
     image: plugins/slack
