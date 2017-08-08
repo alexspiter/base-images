@@ -1,8 +1,8 @@
 # This is coming from https://github.com/operable/dockerfiles
 FROM operable/alpine-base:0.3
 
-ENV ERLANG_VERSION 19.1
-ENV ELIXIR_VERSION 1.3.4
+ENV ERLANG_VERSION 20.0
+ENV ELIXIR_VERSION 1.5.1
 
 # Erlang
 #
