@@ -1,0 +1,7 @@
+FROM node:6-alpine
+
+WORKDIR /usr/src/app
+
+RUN apk update && \
+apk add py-pip bash jq && \
+pip install awscli
