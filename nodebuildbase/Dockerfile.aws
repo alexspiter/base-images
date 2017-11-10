@@ -3,5 +3,5 @@ FROM node:6-alpine
 WORKDIR /usr/src/app
 
 RUN apk update && \
-apk add py-pip bash jq make && \
+apk add py-pip bash jq make g++ && \
 pip install awscli
