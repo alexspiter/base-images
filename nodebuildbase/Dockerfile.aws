@@ -1,7 +1,7 @@
-FROM node:6-alpine
+FROM quay.io/honestbee/nodebuildbase
 
 WORKDIR /usr/src/app
 
-RUN apk update && \
-apk add py-pip bash jq make g++ && \
+RUN apt-get update && \
+apt-get install python jq make && \
 pip install awscli
