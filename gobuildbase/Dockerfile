@@ -1,4 +1,4 @@
-FROM golang:1.7.4
+FROM golang:1.9
 RUN go get -v \
   bitbucket.org/liamstask/goose/cmd/goose \
   github.com/onsi/ginkgo/ginkgo \
