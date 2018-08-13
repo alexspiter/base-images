@@ -14,6 +14,7 @@ RUN curl -L https://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}
 	mv $BIN_PATH/linux-amd64/helm $BIN_PATH/ && \
     rm -rf $BIN_PATH/linux-amd64/
 
-RUN curl -L -o $GOPATH/bin/mbt https://bintray.com/buddyspike/bin/download_file?file_path=mbt_linux_x86_64%2F${MBT_VERSION}%2F${MBT_VERSION}%2Fmbt_linux_x86_64
+RUN curl -L -o $GOPATH/bin/mbt https://bintray.com/buddyspike/bin/download_file?file_path=mbt_linux_x86_64%2F${MBT_VERSION}%2F${MBT_VERSION}%2Fmbt_linux_x86_64 && \
+chmod +x $GOPATH/bin/mbt
 
 CMD bash
