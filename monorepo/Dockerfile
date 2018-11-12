@@ -5,7 +5,7 @@ ENV DEP_VERSION=0.5.0
 
 RUN apk add --no-cache git curl pkgconf alpine-sdk libgit2 libgit2-dev cmake clang clang-dev make gcc g++ libc-dev linux-headers
 RUN curl -fsSL -o /usr/local/bin/dep https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 && chmod +x /usr/local/bin/dep
-RUN git clone https://github.com/honestbee/mbt.git /go/src/mbt
+RUN git clone https://github.com/mbtproject/mbt.git /go/src/mbt
 
 WORKDIR /go/src/mbt
 
