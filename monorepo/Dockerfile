@@ -5,7 +5,7 @@ ENV MBT_VERSION=0.21.0
 
 RUN set -ex \
   && apt-get update \
-  && apt-get install bash git curl libssl1.0.0 libssl-dev -y
+  && apt-get install bash git curl libssl libssl-dev -y
 
 RUN curl -fsSL -o /usr/local/bin/dep https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 && chmod +x /usr/local/bin/dep
 
