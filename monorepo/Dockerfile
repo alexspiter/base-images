@@ -1,10 +1,11 @@
-FROM golang:1.11-alpine
+FROM golang:1.11
 
 ENV DEP_VERSION=0.5.0
 ENV MBT_VERSION=0.21.0
 
 RUN set -ex \
-  && apk add --no-cache bash ca-certificates git curl
+  && apt-get update \
+  && apt-get install bash git curl -y
 
 RUN curl -fsSL -o /usr/local/bin/dep https://github.com/golang/dep/releases/download/v${DEP_VERSION}/dep-linux-amd64 && chmod +x /usr/local/bin/dep
 
