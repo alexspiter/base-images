@@ -11,4 +11,5 @@ RUN apt-get update -qq && apt-get install -y \
   libpq-dev \
   openssl \
   imagemagick \
+  wget \
   curl
